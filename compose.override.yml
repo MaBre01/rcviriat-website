@@ -1,0 +1,5 @@
+services:
+  webserver:
+    labels:
+      - traefik.http.routers.rcviriat_secure.rule=Host(`rcviriat.docker.local`)
+      - ghosts.host=rcviriat.docker.local

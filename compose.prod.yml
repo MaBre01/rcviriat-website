@@ -2,4 +2,6 @@ services:
   webserver:
     restart: unless-stopped
     labels:
-      - traefik.http.routers.${APP_PREFIX}_secure.tls.certresolver=letsencrypt
+      - traefik.http.routers.rcviriat_secure.rule=Host(`rcviriat.fr`) || Host(`www.rcviriat.fr`)
+      - traefik.http.routers.rcviriat_secure.tls.certresolver=letsencrypt
+      - ghosts.host=rcviriat.fr

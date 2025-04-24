@@ -12,11 +12,9 @@ services:
       - ./logo.jpg:/usr/share/nginx/html/logo.jpg:ro
     labels:
       - traefik.enable=true
-      - traefik.http.routers.${APP_PREFIX}_secure.entrypoints=websecure
-      - traefik.http.routers.${APP_PREFIX}_secure.rule=Host(`${APP_URL}`)
-      - traefik.http.routers.${APP_PREFIX}_secure.tls=true
+      - traefik.http.routers.rcviriat_secure.entrypoints=websecure
+      - traefik.http.routers.rcviriat_secure.tls=true
 
-      - ghosts.host=${APP_URL}
       - ghosts.category=Websites
       - ghosts.description=Rugby Club Viriat website
       - ghosts.proto=https
